@@ -1,7 +1,7 @@
-console.log("I exist!")
+console.log("Functional")
 
 $( document ).ready(function() {
-  console.log( "ready!" );
+  console.log( "Initiate" );
 
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
@@ -37,7 +37,7 @@ const deleteNote = function(id) {
   });
 };
 
-// If there is an activeNote, display it, otherwise render empty inputs
+//activeNote
 const renderActiveNote = function() {
   $saveNoteBtn.hide();
 
@@ -54,7 +54,7 @@ const renderActiveNote = function() {
   }
 };
 
-// Get the note data from the inputs, save it to the db and update the view
+// Note data receiver 
 const handleNoteSave = function() {
   var newNote = {
     title: $noteTitle.val(),
@@ -69,7 +69,7 @@ const handleNoteSave = function() {
 
 // Delete the clicked note
 const handleNoteDelete = function(event) {
-  // prevents the click listener for the list from being called when the button inside of it is clicked
+  // Locks order handleNote in parameter
   event.stopPropagation();
 
   const note = $(this)
@@ -108,7 +108,8 @@ var handleRenderSaveBtn = function() {
   }
 };
 
-// Render's the list of note titles
+
+// Returns list of note titles
 const renderNoteList = function(notes) {
   $noteList.empty();
 
@@ -137,12 +138,11 @@ const renderNoteList = function(notes) {
 //   let saveNoteTitle = $(".note-title").val().trim();
 //   let saveNoteText = $(".note-textarea").val().trim();
 
-//   // Using a RegEx Pattern to remove spaces
-//   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+
+
 //   saveNoteTitle = saveNoteTitle.replace(/\s+/g, "").toLowerCase();
 //   saveNoteText = saveNoteText.replace(/\s+/g, "").toLowerCase();
 
-//   // QUESTION: What does $.get do? What are the parameters it is expecting?
 //   $.get("/api/notes" + saveNoteText, function(data) {
 //     console.log(data);
 //     if (data) {
@@ -178,14 +178,14 @@ $noteText.on("keyup", handleRenderSaveBtn);
 // Gets and renders the initial list of notes
 getAndRenderNotes();
 
-//PARSE BEFORE INTEGRATING
+//event Parser
 $(".save-note").on("click", function() {
   let saveNoteTitle = $(".note-title").val().trim();
   let saveNoteText = $(".note-textarea").val().trim();
   console.log(saveNoteTitle, saveNoteText)
 
-  // Using a RegEx Pattern to remove spaces
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+  // RegEx Pattern to remove space
+  
   saveNoteTitle = saveNoteTitle.replace(/\s+/g, "").toLowerCase();
   saveNoteText = saveNoteText.replace(/\s+/g, "").toLowerCase();
 
