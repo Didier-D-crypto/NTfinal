@@ -6,7 +6,7 @@
 
 - Aims to allow users to organize and keep track of tasks to complete
 
-![screenshot]("./public/assets/images/2020-04-30(6)..png")
+![image]("public\assets\images\2020-04-30 (6).png");
 
 
 
