@@ -16,7 +16,7 @@
 Note-taking skills used to be critical in secondary school and college settings.In today's world, many students choose to have methods of learning appropriately with organized timelines and a reminder of key points that are among the most critical note-taking skills.  The art of note taking has transferred into the everyday lives for 
 individuals. This application aims to provide users with information organization as fast and accurate as possible.
 
-!
+
 ## Deployed application Link Below
 https://github.com/Didier-D-crypto/NTfinal
 
