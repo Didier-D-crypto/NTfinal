@@ -42,11 +42,7 @@ app.get("/api/notes", function(req, res) {
     res.json(results);
   });
 
-// app.post("/api/notes", function(req, res) {
-//     var newNote = req.body;
-//     notes.push(newNote);
-//     db.json(newNote);
-// });
+
 
 app.post("/api/notes", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
@@ -83,9 +79,9 @@ app.post("/api/notes", function(req, res) {
         text: text
     }
     try {
-        let oldFile = JSON.parse(fs.readFileSync("db/db.json", 'utf8'))
-        oldFile.push(notes)
-        fs.deleteFileSync("./db/db.json", JSON.stringify(oldFile))
+        let filemade = JSON.parse(fs.readFileSync("db/db.json", 'utf8'))
+        filemade.push(notes)
+        fs.deleteFileSync("./db/db.json", JSON.stringify(filemade))
       } catch (err) {
         console.error(err)
       }
