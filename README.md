@@ -7,7 +7,7 @@
 - Aims to allow users to organize and keep track of tasks to complete
 
 ## Preview
-![screenshot](assets/images/2020-04-30(6).png)
+![png](assets/images/2020-04-30(6).png)
 
 
 
