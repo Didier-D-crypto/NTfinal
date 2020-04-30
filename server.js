@@ -1,5 +1,5 @@
 
-// requiring dep. below
+// requiring dependencies below
 
 
 const fs = require("fs");
